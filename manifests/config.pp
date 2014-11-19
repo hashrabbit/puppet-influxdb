@@ -5,6 +5,7 @@ class influxdb::config(
   $basedatadir  = $influxdb::params::basedatadir,
   $datadir      = $influxdb::params::datadir,
   $raftdir      = $influxdb::params::raftdir,
+  $waldir       = $influxdb::params::waldir,
   $configdir    = $influxdb::params::configdir,
   $logdir       = $influxdb::params::logdir,
 
@@ -62,6 +63,5 @@ class influxdb::config(
       ensure  => $ensure,
       content => template('influxdb/influxdb.conf.erb') ;
   }
-
 
 }

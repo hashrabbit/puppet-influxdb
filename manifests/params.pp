@@ -9,17 +9,18 @@ class influxdb::params {
       $basedatadir  = "${boxen::config::datadir}/influxdb"
       $datadir      = "${boxen::config::datadir}/influxdb/data"
       $raftdir      = "${boxen::config::datadir}/influxdb/raft"
+      $waldir       = "${boxen::config::datadir}/influxdb/wal"
       $configdir    = "${boxen::config::configdir}/influxdb"
       $logdir       = "${boxen::config::logdir}/influxdb"
 
-      $adminport    = '16400'
-      $apiport      = '16401'
-      $raftport     = '16402'
+      $adminport    = '18083'
+      $apiport      = '18086'
+      $raftport     = '18090'
 
       $executable   = "${boxen::config::home}/homebrew/bin/influxdb"
 
       $package      = 'boxen/brews/influxdb'
-      $version      = '0.3.2-boxen1'
+      $version      = '0.8.6-boxen'
 
       $servicename  = 'dev.influxdb'
 

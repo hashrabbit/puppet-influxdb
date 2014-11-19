@@ -1,9 +1,22 @@
-{
-  "AdminHttpPort":  <%= @adminport %>,
-  "AdminAssetsDir": "/opt/boxen/homebrew/opt/influxdb/share/admin/",
-  "ApiHttpPort":    <%= @apiport %>,
-  "RaftServerPort": <%= @raftport %>,
-  "SeedServers":    [],
-  "DataDir":        "<%= @datadir %>",
-  "RaftDir":        "<%= @raftdir %>"
-}
+bind-address = "127.0.0.1"
+
+[logging]
+level = "info"
+file = "stdout"
+
+[admin]
+port = <%= @adminport %>
+assets = "/opt/boxen/homebrew/opt/influxdb/share/admin/"
+
+[api]
+port = <%= @apiport %>
+
+[raft]
+port = <%= @raftport %>
+dir = "<%= @raftdir %>"
+
+[storage]
+dir = "<%= @datadir %>"
+
+[wal]
+dir = "<%= @waldir %>"
