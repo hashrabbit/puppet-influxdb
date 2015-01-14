@@ -20,7 +20,7 @@ class influxdb::params {
       $executable   = "${boxen::config::home}/homebrew/bin/influxdb"
 
       $package      = 'boxen/brews/influxdb'
-      $version      = '0.8.6-boxen'
+      $version      = '0.8.8-boxen'
 
       $servicename  = 'dev.influxdb'
 
